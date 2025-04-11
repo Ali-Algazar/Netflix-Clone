@@ -3,7 +3,8 @@ import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:lottie/lottie.dart';
 
-import '../../../../home/presentation/views/home_view.dart';
+import '../../../../../core/navigation/nav_bar_view.dart';
+
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -19,7 +20,7 @@ class _SplashViewBodyState extends State<SplashViewBody> {
     
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.of(context).pushNamedAndRemoveUntil(HomeView.routeName, (route) => false,);
+      Navigator.of(context).pushNamedAndRemoveUntil(NavBarView.routeName, (route) => false,);
     });
   }
 

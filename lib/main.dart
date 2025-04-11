@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'core/theme/app_theme.dart';
-import 'core/theme/routes/app_routes.dart';
+import 'core/routes/app_routes.dart';
 import 'featureds/splash/presentation/views/splash_view.dart';
 
 void main() {
