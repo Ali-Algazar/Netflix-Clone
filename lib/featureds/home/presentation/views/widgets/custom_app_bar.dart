@@ -11,8 +11,8 @@ class CustomAppBar extends StatelessWidget {
     return Row(
       children: [
         SvgPicture.asset(
-          'assets/svg/logo.svg',
-          height: 33,
+          'assets/svg/netflix-logo.svg',
+          height: 25,
         ),
         const Spacer(),
         IconButton(
