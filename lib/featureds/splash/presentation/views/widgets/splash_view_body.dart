@@ -5,7 +5,6 @@ import 'package:lottie/lottie.dart';
 
 import '../../../../../core/navigation/nav_bar_view.dart';
 
-
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
 
@@ -14,16 +13,16 @@ class SplashViewBody extends StatefulWidget {
 }
 
 class _SplashViewBodyState extends State<SplashViewBody> {
-
   @override
   void initState() {
-    
     super.initState();
     Future.delayed(const Duration(seconds: 3), () {
-      Navigator.of(context).pushNamedAndRemoveUntil(NavBarView.routeName, (route) => false,);
+      Navigator.of(context).pushNamedAndRemoveUntil(
+        NavBarView.routeName,
+        (route) => false,
+      );
     });
   }
-
 
   @override
   Widget build(BuildContext context) {

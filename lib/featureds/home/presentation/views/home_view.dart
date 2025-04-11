@@ -10,17 +10,34 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return SafeArea(
       child: Padding(
-        padding: EdgeInsets.symmetric(
+        padding: const EdgeInsets.symmetric(
           horizontal: 16,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            CustomAppBar(),
-            SizedBox(),
-            CategoryButtonsRow(),
+            const CustomAppBar(),
+            const SizedBox(),
+            const CategoryButtonsRow(),
+            const SizedBox(
+              height: 15,
+            ),
+            Stack(
+              children: [
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.45,
+                  width: double.infinity,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(20),
+                    border: Border.all(
+                      color: Colors.white,
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ],
         ),
       ),
