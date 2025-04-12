@@ -39,12 +39,15 @@ class NavBarView extends StatelessWidget {
             ],
           ),
         ),
-        body: const TabBarView(children: [
-          HomeView(),
-          Scaffold(),
-          Scaffold(),
-          Scaffold(),
-        ]),
+        body: const TabBarView(
+          physics: NeverScrollableScrollPhysics(),
+          children: [
+            HomeView(),
+            Scaffold(),
+            Scaffold(),
+            Scaffold(),
+          ],
+        ),
       ),
     );
   }

@@ -10,7 +10,7 @@ import '../../../data/repos/movie_repo.dart';
 part 'newest_movie_state.dart';
 
 class NewestMovieCubit extends Cubit<NewestMovieState> {
-  NewestMovieCubit({required this.movieRepo}) : super(NewestMovieInitial());
+  NewestMovieCubit({required this.movieRepo}) : super(NewestMovieLoading());
   MovieRepo movieRepo;
 
   Future<void> getNewestMovies() async {

@@ -3,7 +3,7 @@ part of 'newest_movie_cubit.dart';
 @immutable
 sealed class NewestMovieState {}
 
-final class NewestMovieInitial extends NewestMovieState {}
+// final class NewestMovieInitial extends NewestMovieState {}
 
 final class NewestMovieFailuar extends NewestMovieState {
   final Failure failure;

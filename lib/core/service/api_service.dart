@@ -9,7 +9,8 @@ class ApiService {
   ApiService({required this.dio});
 
   Future<Map<String, dynamic>> getTrendingMovies() async {
-    Response response = await dio.get('$baseUrl/now_playing?api_key=$apiKey');
+    Response response = await dio.get(
+        '$baseUrl/movie/now_playing?api_key=0901bbf69b259b0b2c7761fc0f123c77');
 
     return response.data;
   }

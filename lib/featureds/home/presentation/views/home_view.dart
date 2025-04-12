@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-
 import 'widgets/category_buttons_row.dart';
 import 'widgets/custom_app_bar.dart';
+import 'widgets/featured_movie_carousel.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});
@@ -10,34 +10,21 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
+    return const SafeArea(
       child: Padding(
-        padding: const EdgeInsets.symmetric(
+        padding: EdgeInsets.symmetric(
           horizontal: 16,
         ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const CustomAppBar(),
-            const SizedBox(),
-            const CategoryButtonsRow(),
-            const SizedBox(
+            CustomAppBar(),
+            SizedBox(),
+            CategoryButtonsRow(),
+            SizedBox(
               height: 15,
             ),
-            Stack(
-              children: [
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.45,
-                  width: double.infinity,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(20),
-                    border: Border.all(
-                      color: Colors.white,
-                    ),
-                  ),
-                ),
-              ],
-            ),
+            FeaturedMovieCarousel(),
           ],
         ),
       ),
